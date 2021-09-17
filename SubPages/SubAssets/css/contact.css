@@ -1,0 +1,509 @@
+.container {
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 97px;
+}
+
+.header__navbar-left {
+    width: 45%;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.header__navbar-right {
+    width: 45%;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.float__left {
+    float: left;
+    padding-left: 15px;
+}
+
+.float__right {
+    float: right;
+    padding-right: 15px;
+}
+
+.header__navbar {
+    display: flex;
+    list-style: none;
+    font-size: 1.44rem;
+    text-transform: uppercase;
+}
+
+.header__navbar-item {
+    margin: 0 14px;
+    text-align: center;
+    line-height: 97px;
+    color: var(--text_color);
+}
+
+.active {
+    color: #000;
+    font-weight: 700;
+    border-bottom: 1px solid #000;
+}
+
+.navbar__item-link {
+    padding: 39px 0;
+}
+
+.navbar__item-link:hover {
+    color: #000;
+    font-weight: 700;
+    border-bottom: 1px solid #000;
+}
+
+.header__navbar-icon {
+    display: none;
+}
+
+.logo__website {
+    display: flex;
+    align-items: center;
+    width: 12.5%;
+    justify-content: center;
+}
+
+.icon__social {
+    color: #999;
+    font-size: 1.8rem;
+}
+
+.icon__social:hover {
+    color: #000
+}
+
+.lang__website {
+    position: relative;
+    margin-right: 20px;
+    min-width: 30px;
+}
+
+/* MODAL MENU */
+.modal__menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #05152cf6;
+    z-index: 6;
+}
+
+.logo__website-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__navbar-icon-modal {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.header__navbar-icon-modal.js__close-modal {
+    padding-left: 4px;
+}
+
+.header__navbar-icon-modal a {
+    padding: 30px;
+}
+
+.header__navbar-icon-modal:hover a {
+    color: var(--white_color);
+}
+
+.modal__menu-header {
+    display: flex;
+    height: 97px;
+    justify-content: space-between;
+}
+
+.container__search-frame {
+    position: relative;
+    margin: auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #576272;
+}
+
+.modal__menu-search-frame {
+    display: flex;
+    margin: 4px auto;
+    width: 95%;
+    height: 36px;
+    border-radius: 12px;
+    background-color: #103e80;
+}
+
+.modal__menu-search-frame .search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 0 8px 0 14px;
+    color: #aab8cb;
+}
+
+.modal__menu-search-frame .search-frame {
+    display: flex;
+    flex: 1;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    color: var(--white_color);
+    background-color: #576272;
+    font-size: 1.5rem;
+    padding-left: 12px;
+}
+
+.modal__menu-search-frame .search-cancel {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: var(--white_color);
+    padding: 0 8px;
+    padding: 0 10px 0 6px;
+    cursor: pointer;
+}
+
+.search-frame::placeholder {
+    color: #ccc;
+}
+
+.modal__menu-list {
+    margin: 0 45px;
+    list-style: none;
+}
+
+.modal__menu-item {
+    display: flex;
+}
+
+.modal__menu-item + .modal__menu-item {
+    border-top: 1px solid #576272;
+}
+
+.modal__menu-item:hover .modal__menu-link,
+.modal__menu-item:hover .modal__menu-quicklink {
+    color: var(--white_color);
+}
+
+.modal__menu-link {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    color: #757e8b;
+    text-transform: uppercase;
+    padding: 16px 0;
+}
+
+/* Modal quick links */
+.search-frame:focus ~ .container__quickLink {
+    display: flex;
+}
+
+.container__quickLink {
+    display: none;
+    position: absolute;
+    top: 147px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+.header__quickLink {
+    font-size: 1.8rem;
+    margin: 18px auto 8px;
+    width: 95%;
+    color: #576272;
+    cursor: default;
+}
+
+.modal__menu-quicklink {
+    display: block;
+    width: 100%;
+    line-height: 1.4;
+    font-size: 2rem;
+    color: #757e8b;
+    padding: 16px 0;
+}
+
+/* Modal change languages */
+.change__lang {
+    display: none;
+    width: 130px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 100%;
+    right: -13px;
+    text-align: left;
+    padding: 0 12px;
+    text-transform: none;
+    color: var(--white_color);
+}
+
+.change__lang a {
+    color: var(--white_color);
+}
+
+.english {
+    display: block;
+}
+
+.vietnamese {
+    display: block;
+}
+
+.change__lang::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: -45px;
+    right: 0px;
+}
+
+.hoverToShow:hover .change__lang {
+    display: block;
+}
+
+.languages__item {
+    display: block;
+    width: 100%;
+}
+
+.english {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.219);
+}
+
+
+.vietnamese {
+    height: 40px;
+    line-height: 40px;
+}
+
+.contact__social {
+    border-left: 0.001px solid rgba(204, 204, 204, 0.5);
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkFacebook {
+    position: relative;
+    width: 0;
+}
+
+.linkLinkedin {
+    position: relative;
+    width: 0;
+    margin-right: 20px;
+}
+
+.linkFacebook:hover .followOnFb{
+    display: block;
+}
+
+.linkLinkedin:hover .followOnLk{
+    display: block;
+}
+
+.linkFacebook:hover,
+.linkLinkedin:hover {
+    opacity: 0.9;
+}
+
+.followOnFb {
+    display: none;
+    position: absolute;
+    font-size: 1.3rem;
+    line-height: 28px;
+    color: var(--white_color);
+    background-color: #000;
+    top: 75px; /* 75 -15*/
+    left: -15px;
+    width: 140px;
+    height: 28px;
+    border-radius: 8px;
+    text-transform: none;
+    animation: fadeIn 0.5s backwards;
+}
+
+.followOnLk {
+    display: none;
+    position: absolute;
+    font-size: 1.3rem;
+    line-height: 28px;
+    color: var(--white_color);
+    background-color: #000;
+    top: 75px;
+    right: -46px;
+    width: 140px;
+    height: 28px;
+    border-radius: 8px;
+    text-transform: none;
+    animation: fadeIn 0.5s linear;
+}
+
+.followOnFb::before {
+    position: absolute;
+    content: "";
+    top: -17px;
+    left: 60px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+}
+
+.followOnLk::before {
+    position: absolute;
+    content: "";
+    top: -17px;
+    right: 25px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+}
+
+/* BODY */
+.slider_contact {
+    display: flex;
+    margin: 50px auto;
+    width: 90%;
+}
+
+.slider_container {
+    display: flex;
+}
+
+.contact {
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sub_title {
+    font-size: 9rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #daeeff;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 3.4rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.infor_contact {
+    font-size: 1.6rem;
+}
+
+.email_infor,
+.address_infor {
+    margin-bottom: 20px;
+}
+
+.social_icons {
+    display: flex;
+    margin: 20px auto;
+}
+
+.icon_facebook {
+    display: flex;
+    color: #fff;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    background-color: #3a589d;
+    margin-right: 5px;
+}
+
+.icon_linkedin {
+    display: flex;
+    color: #fff;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    background-color: #0072b7;
+}
+.icon_facebook i ,
+.icon_linkedin i {
+    font-size: 1.6rem;
+    display: flex;
+    margin: auto;
+}
+
+.img_contact {
+    width: 50%;
+}
+
+.img_contact img {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.content_center {
+
+}
+
+.container_text {
+    display: block;
+    margin: auto;
+    width: 50%;
+    line-height: 1.5;
+    font-size: 3.04rem;
+    text-align: center;
+    color: #5c5b6c;
+    padding: 15px;
+}
+
+.form_contact {
+    width: 50%;
+    display: flex;
+    margin: auto;
+}
+
+.form_contact-inner {
+
+}
+
+.name_email {
+    display: flex;
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.form_name {
+    width: 50%;
+}
+
+.form_email {
+    width: 50%;
+
+}
+
+.space {
+    margin-bottom: 10px;
+}

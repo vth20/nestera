@@ -1,0 +1,53 @@
+:root {
+    --text_color: #f2f6f885;
+    --white_color: #fff;
+}
+
+* {
+    margin: 0;
+    box-sizing: inherit;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text_color);
+}
+
+ul {
+    padding: 0;
+}
+
+/* Grid layout */
+.grid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growing {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}

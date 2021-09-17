@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=STIX+Two+Math&display=swap');
+:root {
+    --main-text-font: 'Open Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1024px;
+    margin: auto;
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap; 
+}
+header{
+    background-image:url("image/img-001.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100vw ;
+    height: 100vh;
+    position: relative;
+}
+.bg-image{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+.top{
+    position:absolute ;
+    width: 100%;
+    z-index: 1;
+}
+.header-top{
+    justify-content:center ;
+    padding:12px 0 ;
+}
+.header-top ul{
+    display: flex;
+}
+.header-top ul li{
+    margin-left: 30px; 
+    margin-right: auto;
+    position: relative; 
+}
+.header-top ul li::after{
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -2px;
+    height:3px ;
+    width: 0%;
+    left: 50%;
+    transform:translateX(-50%) ;
+    background-color: cornflowerblue;
+    transition: all 0.5s ease;
+}
+.header-top ul li:hover::after{
+    width: 100%;
+}
+.header-top ul li a{
+    font-family:var(--main-text-font) ;
+    color: white;
+} 
+.header-top ul i{
+    font-size: 32px;
+    color:red;
+    margin:12px 0 0 12px ;
+    cursor: pointer;
+    margin-bottom:150px ;
+    display: none;
+}
+.header-top> i {
+    font-size: 32px;
+    color: cornflowerblue;
+    cursor: pointer;
+    display: none;
+}
+.header-text{
+    position: absolute;
+    top:50% ;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    min-width: 300px;
+    text-align:center;
+}
+.header-text h1{
+    font-family: var(--main-text-font);
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+.header-text p{
+    font-family: var(--main-text-font);
+    font-size: 20px;
+    color:white;
+}
+/*Cartegory*/
+.cartegory{
+    margin-top: 70px;
+}
+@media (max-width:575px) {
+    .header-top ul{
+        position: fixed;
+        width: 200px;
+        height: 100vh;
+        background-color:cornflowerblue ;
+        right: 0;
+        top:0;
+        flex-direction: column;
+        transform: translateX(100%);
+        opacity: 0;
+        transition:all 0.5s ease;
+    }
+    .header-top ul li{
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+    .header-top>i{
+        display: block;
+    }
+    .header-top ul >i{
+        display: block;
+    }
+    .cartegory p{
+        width: 100%;
+        top: 25px;
+        left: 30px;
+        text-align: center;
+    }
+    .cartegory-item{
+        width: 45%;
+        margin-top: 20px;
+    }
+    .cartegory-item button{
+        text-align: center;
+        bottom: 15px;
+        left: 20%;
+    }
+    .container-item h2{
+        width: 100%;
+    }
+    .address{
+        width: 100%;
+        margin-top: 250px;
+    }
+}
+.cartegory-content{
+    justify-content: space-between;
+}
+.cartegory-item{
+    margin-top: 50px;
+    width: 49%;
+    height: 300px;
+    position: relative;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cartegory-item p{
+    position: absolute;
+    color:blue;
+    margin-bottom: 50px;
+    text-align: left;
+    font-size: 30px;
+}
+.cartegory-item:hover p{
+    background-color: black;
+}
+.cartegory-item h2{
+    margin-top: 50px;
+    position: absolute;
+    color:indigo;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+.cartegory-item:hover h2{
+    background-color:black;
+}
+.cartegory-item button{
+    margin-top: 70px;
+    position: absolute;
+    font-size: 25px;
+    color:black;
+    background-color:cornflowerblue;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.cartegory-item:hover button{
+    background-color: cornflowerblue;
+}
+.cartegory-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.5;
+}
+.address{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px; 
+    display: flex; 
+    align-items: center;
+}
+/*-------Map------*/
+.map{
+    width: 100%;
+    height: 400px;
+}
