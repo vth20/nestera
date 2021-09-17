@@ -1,2 +1,7 @@
 # nestera
-Clon website nestsera: nestsera.com
+  Clon website nestsera: nestsera.com
+    
+  - Dựng lại trang chủ tiếng Anh, tiếng Việt.
+  - Làm responsive cho trang web.
+  - Làm mới menu (khác menu của nestsera.com).
+  - ...
