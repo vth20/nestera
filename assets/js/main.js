@@ -64,11 +64,33 @@ const logoItems = document.querySelectorAll('.logo__item')
 const btnRight = document.querySelector('.clickTo__Scroll-right')
 const btnLeft = document.querySelector('.clickTo__Scroll-left')
 
+const firstItem = document.querySelector('.first_item')
+
 
 btnRight.onclick = () => {
-    
+    var style = getComputedStyle(firstItem)
+    var mgLeft = parseInt(style.marginLeft)
+
+    if(mgLeft < -1170) {
+        let next = 0
+        firstItem.style.marginLeft = next + 'px'
+    }
+    else {
+        let next = (mgLeft - 1170)
+        firstItem.style.marginLeft = next + 'px'
+    }
 }
 
 btnLeft.onclick = () => {
+    var style = getComputedStyle(firstItem)
+    var mgLeft = parseInt(style.marginLeft)
 
+    if(mgLeft > -1170) {
+        let prev = -2340
+        firstItem.style.marginLeft = prev + 'px'
+    }
+    else {
+        let prev = (mgLeft + 1170)
+        firstItem.style.marginLeft = prev + 'px'
+    }
 }
