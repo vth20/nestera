@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="SHORTCUT ICON" href="../assets/images/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Edit projects</title>
+</head>
+<body>
+    <style>
+    * {
+        margin: 0;
+        box-sizing: inherit;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+        line-height: 1.6rem;
+        font-family: 'Raleway', sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    .container_grid {
+        padding: 80px 0;
+    }
+
+    .grid.wide {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -4px;
+        margin-right: -4px;
+        overflow: hidden;
+    }
+
+    .col {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .c-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .m-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .l-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    .container_grid {
+        padding: 80px 0;
+    }
+
+    .booking-item{
+        height: 100%;
+        transition: all 0.5s ease;
+        margin-bottom: 30px;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+    }
+    .booking-item .image {
+        width: 100%;
+        padding-top: 68%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        transition:all 0.3s ease;
+        overflow: hidden;
+    }
+
+    .booking-item .image:hover{
+        transform: scale(1.05);
+    }
+
+    .booking-item h2{
+        font-size: 20px;
+        padding-top: 15px;
+        font-family: var(--main-text-font);
+        color: cornflowerblue;
+        text-align: center;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .booking-item p{
+        font-size: 20px;
+        padding-top: 20px;
+        line-height: 1.4;
+        font-family: var(--main-text-font);
+        background-color: white;
+        color: black;
+        text-align: center;
+    }
+
+    /* Edit projects */
+    .menuBtn {
+        display: none;
+        content: '';
+        top: 8px;
+        right: 0;
+        color: rgba(201, 201, 201, 0.925);
+        font-size: 30px;
+        width: 40px;
+        height: 30px;
+        z-index: 1;
+        position: absolute;
+        cursor: pointer;
+        transition: all 0.5s;
+        user-select: none;
+    }
+
+    .editmenu {
+        display: block;
+        font-size: 25px;
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        transform: translateY(-112%);
+        transition: all 0.4s;
+        z-index: 1;
+        user-select: none;
+    }
+
+    .exitMenu {
+        color: rgba(201, 201, 201, 0.925);
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .editBtn {
+        color: rgba(201, 201, 201, 0.925);
+        cursor: pointer;
+    }
+
+    .booking-item:hover .menuBtn {
+        display: block;
+    }
+
+    #boxEditElement {
+        margin: auto;
+        width: 80%;
+        padding: 4%;
+        border-top: 3px solid #000;
+    }
+
+    .delete-project {
+        color: rgba(201, 201, 201, 0.925);
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    button.hide {
+        display: none;
+    }
+
+    label {
+        width: 10rem;
+        display: inline-block;
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    input {
+        padding: 6px 12px;
+        border: 1px solid;
+        width: 75%;
+        border-color: transparent transparent #ccc transparent;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 15px;
+        background-color: #989898;
+        font-size: 1.6rem;
+        color: #eee;
+        cursor: pointer;
+        margin: 20px 12px;
+        padding: 5px;
+    }
+    </style>
+
+    <div class="container_grid">
+        <div class="grid wide">
+            <div class="row root">
+                <!--render bằng api-->
+            </div>
+        </div>
+    </div>
+    <div id="boxEditElement">
+        <div>
+            <label for="">Name</label>
+            <input placeholder="Input name..." type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="">Description</label>
+            <input placeholder="Input description..." type="text" name="description" id="description">
+        </div>
+        <div>
+            <label for="">URL Image</label>
+            <input placeholder="Input URL image..." type="text" name="URL Image" id="URLImage">
+        </div>
+        <div>
+            <button id="create-btn">Create</button>
+            <button id="update-btn" class="hide">Update</button>
+            <button id="cancel-btn" class="hide">Cancel</button>
+        </div>
+    </div>
+    <script src="./source/app.js"></script>
+</body>
+</html>

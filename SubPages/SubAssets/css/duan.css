@@ -1,220 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=STIX+Two+Math&display=swap');
-:root {
-    --main-text-font: 'Open Sans', sans-serif;
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-}
-li{
-    list-style: none;
-}
-.container{
-    max-width: 1024px;
-    margin: auto;
-
-}
-.row{
-    display: flex;
-    flex-wrap: wrap; 
-}
-header{
-    background-image:url("image/img-002.jpg") ;
-    background-position: center;
-    background-repeat: no-repeat;
+.container {
+    background: url(../img/banner-Careers.jpg) no-repeat;
     background-size: cover;
-    width:100vw ;
-    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 85vh;
     position: relative;
-}
-.bg-image{
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.6;
-}
-.top{
-    position:absolute ;
-    width: 100%;
-    z-index: 1;
-}
-.header-top{
-    justify-content:center ;
-    padding:12px 0 ;
-}
-.header-top ul{
-    display: flex;
-}
-.header-top ul li{
-    margin-left: 30px; 
-    margin-right: auto;
-    position: relative; 
-}
-.header-top ul li::after{
-    position: absolute;
-    content: "";
-    display: block;
-    bottom: -2px;
-    height:3px ;
-    width: 0%;
-    left: 50%;
-    transform:translateX(-50%) ;
-    background-color: cornflowerblue;
-    transition: all 0.5s ease;
-}
-.header-top ul li:hover::after{
-    width: 100%;
-}
-.header-top ul li a{
-    font-family:var(--main-text-font) ;
-    color: white;
-} 
-.header-top ul i{
-    font-size: 32px;
-    color:red;
-    margin:12px 0 0 12px ;
-    cursor: pointer;
-    margin-bottom:150px ;
-    display: none;
-}
-.header-top> i {
-    font-size: 32px;
-    color: cornflowerblue;
-    cursor: pointer;
-    display: none;
 }
 .header-text{
     position: absolute;
-    top:50% ;
+    display: flex;
+    top: 65%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 700px;
-    min-width: 500px;
-    text-align:center;
+    transform: translate(-50%, -65%);
+    text-align: center;
+    width: 100%;
+    height: 23%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .header-text h1{
     font-family: var(--main-text-font);
-    color: cornflowerblue;
+    color: #18DDFC;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 90px;
     margin-bottom: 30px;
 }
-.header-text p{
-    font-family: var(--main-text-font);
-    font-size: 20px;
-    color:white;
-}
-@media (max-width:575px) {
-    .header-top ul{
-        position: fixed;
-        width: 200px;
-        height: 100vh;
-        background-color:cornflowerblue ;
-        right: 0;
-        top:0;
-        flex-direction: column;
-        transform: translateX(100%);
-        opacity: 0;
-        transition:all 0.5s ease;
-    }
-    .header-top ul li{
-        margin-bottom: 20px;
-        margin-left: 40px;
-    }
-    .header-top>i{
-        display: block;
-    }
-    .header-top ul >i{
-        display: block;
-    }
-    .bg-image{
-        width: 100%;
-    }
-    .header-text p{
-        width: 100% !important;
-    }
-    .booking-item{
-        margin-left: 5px;
-        margin-right: 5px;
-        width: 90%;
-    }
-    .booking-item h2{
-       width: 100%;
 
-    }
-    .booking-item p{
-        width: 100%;
-        margin-top:200px;
-    }
-    .diachi h3 p{
-        width: 100% !important;
-    }
-    .map{
-        width: 100%;
-    }
+.header-text p{
+    width: 60%;
+    font-size: 34px;
+    line-height: 40px;
+    color: #fff;
+    margin: 0;
 }
+
 /*---------Booking-------*/
-.booking{
-    padding: 50px 0;
+.row {
+    overflow: hidden;
 }
-.booking-items{
-    justify-content: space-between;
+
+.container_grid {
+    padding: 110px 0;
 }
+
 .booking-item{
-    width: 30%;
-    border-radius: 15px;
+    height: 100%;
     transition: all 0.5s ease;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 10px;
     position: relative;
 }
-.booking-item img{
+.booking-item .image {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    transition:all 0.5s ease;
-}
-.booking-item img:hover{
-    transform: scale(1.02);
-}
-.booking-item h2{
-    padding-top: 90px;
-    font-family: var(--main-text-font);
-    color:cornflowerblue;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    opacity: 1;
-    transition: all 0.5s ease;
-}
-.booking-item p{
-    padding-top: 55px;
-    font-family: var(--main-text-font);
-    text-align: justify;
-    background-color: white;
-    color: black;
-    text-align: center;
+    padding-top: 68%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition:all 0.3s ease;
+    overflow: hidden;
 }
 
-/*------Address---------*/
-.address{
-    width: 100%;
-    height: 100%;
-    padding-top: 30px; 
-    display: flex; 
-    align-items: center;
-    flex-direction: row;
+.booking-item .image:hover{
+    transform: scale(1.05);
+}
+
+.booking-item h2{
+    font-size: 20px;
+    padding-top: 15px;
+    font-family: var(--main-text-font);
+    color: #48a9fe;
+    text-align: center;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.booking-item h2:hover {
+    color: #000;
+}
+
+.booking-item p{
+    font-size: 20px;
+    padding-top: 12px;
+    line-height: 1.4;
+    font-family: var(--main-text-font);
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.booking-item p:hover {
+    color: #48a9fe;
+}
+
+.menuBtn, .editmenu,
+.exitMenu, .editBtn {
+    display: none;
 }
 /*-------Map------*/
-.map{
-    width: 100%;
-    height: 400px;
+.map__nestera {
+    height: 450px;
 }
+
+.copyright {
+    display: flex;
+    height: 48px;
+    background-color: #00000e;
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.copyright span {
+    font-size: 1.44rem;
+    margin: auto;
+}
+
+@media (max-width:575px) {
+    .header-text h1{
+        width: 100%;
+        font-size: 50px;
+    }
+    .header-text p{
+        width: 80% ;
+        margin: auto;
+        text-align: center;
+     }
+
+}
+
+/* @media (min-width: 730px) and (max-width: 1006px) {
+    .booking-item {
+        height: 450px;
+    }
+}
+
+@media (min-width: 440px) and (max-width: 729px) {
+    .booking-item {
+        height: 400px;
+    }
+} */

@@ -20,7 +20,7 @@
             <div class="header__navbar-left">
                 <ul class="header__navbar  float__left">
                     <li class="header__navbar-item">
-                        <a href="#" class="navbar__item-link active">home</a>
+                        <a href="../index.html" class="navbar__item-link active">home</a>
                     </li>
                     <li class="header__navbar-item">
                         <a href="#" class="navbar__item-link">about us</a>
@@ -198,16 +198,71 @@
             </span>
         </div>
         <div class="form_contact">
-            <div class="form_contact-inner">
+            <form method="post" class="form_contact-inner">
                 <div class="name_email">
-                    <form class="form_name">
-                        <div class="space"><label for="name">Name*</label></div>
-                        <input type="text" id="name">
-                    </form>
-                    <form class="form_email">
-                        <div class="space"><label for="email">email*</label></div>
-                        <input type="text" id="name">
-                    </form>
+                    <label class="space" for="name">
+                        Name*
+                        <input required type="text" class="input" id="name">
+                    </label>
+                    <label class="space" for="email">
+                        Email*
+                        <input required type="text" class="input" id="email">
+                    </label>
+                </div>
+                <div class="subject-container">
+                    <label class="subject" for="subject">
+                        Subject*
+                        <input required type="text" class="input" id="subject">
+                    </label>
+                </div>
+                <div class="describle">
+                    <label class="describle" for="describle">
+                        Describe what you need
+                        <textarea required name="text" id="describle" cols="40" rows="8"></textarea>
+                    </label>
+                </div>
+                <div class="btn_container">
+                    <input type="submit" value="Send message" class="btnSend">
+                </div>
+            </form>
+        </div>
+        <div class="comunications">
+            <div class="comunications__adress">
+                <div class="comunications__infor">
+                    <h3>Adress</h3>
+                    <p>48 - 50 Nguyen Phuoc Lan Street,</p>
+                    <p>Cam Le District, Danang City</p>
+                </div>
+            </div>
+            <div class="comunications__email">
+                <div class="comunications__infor">
+                    <div class="comunications__icon-email">
+                        <a href="#">
+                            <img src="./SubAssets/img/icon-email.svg" alt="Email">
+                        </a>
+                    </div>
+                    <h3>Email</h3>
+                    <p>contact@nestsera.com</p>
+                </div>
+            </div>
+            <div class="comunications__phone">
+                <div class="comunications__infor">
+                    <div class="comunications__icon-phone">
+                        <a href="#">
+                            <img src="./SubAssets/img/icon-phone.svg" alt="Phone">
+                        </a>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>(+84) 2362 639 639</p>
                 </div>
             </div>
         </div>
+        <div class="map__nestera">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.841367155711!2d108.22333831478478!3d16.02177128891023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219f77c7789ab%3A0xca345a1127dad4b9!2zNDggTmd1eeG7hW4gUGjGsOG7m2MgTGFuLCBIb8OgIFh1w6JuLCBD4bqpbSBM4buHLCDEkMOgIE7hurVuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1627097993346!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="copyright">
+            <span>Copyright © 2021 Nestsera Technology.</span>
+        </div>
+    </div>
+</body>
+</html>
